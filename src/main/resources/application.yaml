@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: springbootapi
+  datasource:
+    url: jdbc:mysql://localhost:3306/shopdev
+    username: root
+    password: trantuan123
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+  security:
+    user:
+      password: root
+      name: root
+      role: ## multiple roles
+        - admin
+        - user
+server:
+  port: 9906
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+ 
